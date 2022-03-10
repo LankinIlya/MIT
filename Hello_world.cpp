@@ -2,14 +2,14 @@
 
 using namespace std;
 
-int fib(int n){
-    if(n == 2){
-        return 1;
+void fib(int n){
+    int a = 0;
+    int b = 1;
+    for(int i = 0; i < n; i++){
+        cout << a << endl;
+        b = a + b;
+        a = b - a;
     }
-    if(n == 1){
-        return 0;
-    }
-    return fib(n - 1) + fib(n - 2);
 }
 
 int main(){
@@ -17,5 +17,5 @@ int main(){
     int n;
     cout << "¬ведите номер члена последовательности:" << endl;
     cin >> n;
-    cout << fib(n);
+    fib(n);
 }
